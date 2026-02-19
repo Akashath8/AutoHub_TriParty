@@ -4,5 +4,6 @@ set -o errexit
 
 npm install
 npm install --prefix server
-npm install --prefix client
+# Client needs devDependencies (like vite) to build
+npm install --prefix client --include=dev
 npm run build --prefix client
